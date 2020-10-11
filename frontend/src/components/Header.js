@@ -2,6 +2,10 @@ import React from "react";
 import {LinkContainer} from 'react-router-bootstrap'
 import { Navbar, Nav, Container } from "react-bootstrap";
 
+/*
+  This component is for the navbar on the homepage
+*/
+
 const Header = () => {
   return (
     <header>

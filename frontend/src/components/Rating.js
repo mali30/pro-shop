@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
+/*
+    This component is for the reviews feature
+*/
 // color is an optional prop
 const Rating = ({value, text, color}) => {
     return (

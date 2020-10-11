@@ -4,6 +4,10 @@ import { Row, Col } from 'react-bootstrap'
 import Product from '../components/Product'
 import product from '../products'
 
+/*
+    This component is for the homescreen. Will display all the products we have 
+    by passing each product into the Product Component
+*/
 
 const HomeScreen = () => {
     return (

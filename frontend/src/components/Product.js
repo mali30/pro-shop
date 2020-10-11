@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap'
 import Rating from './Rating'
 
+/*
+    This component will display each product on the home screen
+    into a Card that holds the image, price, reviews, and name of the product. 
+*/
+
+
 // destructing the props
 const Product = ({product}) => {
     return (
