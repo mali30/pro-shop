@@ -9,10 +9,11 @@ import products from '../products'
     the reviews, price, description, status and the Add to Cart Button
 */
 
-const ProductScreen = ({match}) => {
+const ProductScreen = ({ match }) => {
+    
     // get the product passed in the url.
     const product = products.find(product => product._id === match.params.id)
-    console.log(product);
+
     return (
         <>
             <Link className='btn btn-light my-3' to='/'>
