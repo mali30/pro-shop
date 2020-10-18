@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 import Rating from '../components/Rating'
-import products from '../products'
+import axios from 'axios'
+
 
 /*
     This component will display an image of a product,
@@ -12,7 +13,21 @@ import products from '../products'
 const ProductScreen = ({ match }) => {
     
     // get the product passed in the url.
-    const product = products.find(product => product._id === match.params.id)
+
+    const [product, setProduct] = useState([]);
+
+        // will run as soon as component loads
+        useEffect(() => {
+            const fetchProduct = async () => {
+                // destructure data from res instead of doing res.data
+                // now getting id from the url using match.params
+                const { data } = await axios.get(`/api/products/${match.params.id}`)
+                setProduct(data);
+    
+            }
+    
+            fetchProduct()
+        }, [])
 
     return (
         <>
