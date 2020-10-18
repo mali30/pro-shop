@@ -27,7 +27,8 @@ const ProductScreen = ({ match }) => {
             }
     
             fetchProduct()
-        }, [])
+            // stops warning from showing that match.params.id needs to be added
+        }, [match])
 
     return (
         <>
