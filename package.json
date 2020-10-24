@@ -8,7 +8,9 @@
     "start": "node backend/server",
     "backend-server": "nodemon backend/server",
     "client-server": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run backend-server\" \"npm run client-server\""
+    "dev": "concurrently \"npm run backend-server\" \"npm run client-server\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
   },
   "repository": {
     "type": "git",
