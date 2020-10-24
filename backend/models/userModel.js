@@ -7,6 +7,7 @@ const userSchema = mongoose.Schema({
     },
     email: {
         type: String,
+        required: true,
         unique: true
     },
     password: {
@@ -14,7 +15,7 @@ const userSchema = mongoose.Schema({
         required: true
     },
     isAdmin: {
-        type: boolean,
+        type: Boolean,
         required: true,
         default: false
     }
