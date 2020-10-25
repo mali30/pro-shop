@@ -26,7 +26,7 @@ const importData = async () => {
     // grabbing admin user and we know it's first in our array
     const adminUser = createdUser[0]._id;
 
-    // adding the adminUser to the correct user
+    // now we are setting the adminUser id to the user field in the product
     const sampleProducts = products.map((product) => {
       return {
         ...product,
