@@ -27,7 +27,7 @@ const HomeScreen = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             // destructure data from res instead of doing res.data
-            const { data } = await axios.get('/api/products')
+            const { data } = await axios.get('api/products')
             setProducts(data);
 
         }
